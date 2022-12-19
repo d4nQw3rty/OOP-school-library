@@ -57,11 +57,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [OOP school library] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+>
 
-**[your_project__name]** is a...
+**[OOP school library]** is an app that record what books are in the library and who borrows them.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -70,23 +70,9 @@ After you're finished please remove all the comments and instructions!
 > Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
-  <summary>Client</summary>
+  <summary>Ruby</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
   </ul>
 </details>
 
@@ -94,11 +80,11 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+> 
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[Add books]**
+- **[Add students or teachers ]**
+- **[Save records of who borrowed a given book and when]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,9 +92,8 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+> 
+- [Not available]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,13 +101,16 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
+> 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
+- Install Ruby in your computer [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
+- Install Git in your computer [Git](https://git-scm.com/downloads)
+- Any text editor [VSCode](https://code.visualstudio.com/download) recomended
+
 
 <!--
 Example command:
@@ -135,6 +123,8 @@ Example command:
 ### Setup
 
 Clone this repository to your desired folder:
+
+git clone git@github.com:d4nQw3rty/OOP-school-library.git
 
 <!--
 Example commands:
@@ -149,6 +139,8 @@ Example commands:
 
 Install this project with:
 
+run in your terminal the command: bundle install
+
 <!--
 Example command:
 
@@ -162,6 +154,7 @@ Example command:
 
 To run the project, execute the following command:
 
+exeecute the command: ruby main.rb
 <!--
 Example command:
 
@@ -202,17 +195,11 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Danys Linares**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@github](https://github.com/d4nQw3rty)
+- Twitter: [@twitter](https://twitter.com/Danys_Linares)
+- LinkedIn: [LinkedIn](www.linkedin.com/in/danys-linares)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -222,9 +209,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[Calculate any fee]**
+- [ ] **[add book quantity]**
+- [ ] **[How many are borrow]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -234,7 +221,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/d4nQw3rty/OOP-school-library/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -244,7 +231,7 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project give a star ⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -254,7 +241,7 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+I would like to thank [Microverse](https://www.microverse.org/) for the opportunity to learn and grow as a developer.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -264,13 +251,13 @@ I would like to thank...
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+- **[Was it built with ruby?]**
 
-  - [Answer_1]
+  - [yes it was]
 
-- **[Question_2]**
+- **[will you create new programs?]**
 
-  - [Answer_2]
+  - [Yes i will be creating new programs]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
