@@ -1,3 +1,4 @@
+require './book'
 class Rental
   def initialize(date)
     @date = date
