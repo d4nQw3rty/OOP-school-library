@@ -1,8 +1,10 @@
 require './nameable'
 require './capitalize_decorator'
 require './trimmer_decorator'
+require './rental'
 class Person < Nameable
   # initialize method
+  attr_accessor :name, :age, :rentals
 
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
@@ -10,11 +12,8 @@ class Person < Nameable
     @name = name
     @age = age
     @parent_permission = parent_permission
+    @rentals = []
   end
-  # getter method
-
-  attr_reader :id
-  attr_accessor :name, :age
 
   # Public methods
 
@@ -25,6 +24,11 @@ class Person < Nameable
   def correct_name
     @name
   end
+
+  def add_rental(date)
+    @rentals.push(date, self)
+  end
+
   # Private methods
 
   private
