@@ -4,7 +4,8 @@ require './trimmer_decorator'
 require './rental'
 class Person < Nameable
   # initialize method
-  attr_accessor :name, :age, :rentals
+  attr_accessor :name, :age
+  attr_reader :id, :rentals
 
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
@@ -25,8 +26,8 @@ class Person < Nameable
     @name
   end
 
-  def add_rental(date)
-    @rentals.push(date, self)
+  def add_rental(date, book)
+    @rentals.push(Rental.new(date, book, self))
   end
 
   # Private methods
@@ -37,10 +38,3 @@ class Person < Nameable
     @age >= 18
   end
 end
-
-person = Person.new(22, 'maximilianus')
-person.correct_name
-capitalizedperson = CapitalizeDecorator.new(person)
-capitalizedperson.correct_name
-capitalizedtrimmedperson = Trimmerdecorator.new(capitalizedperson)
-capitalizedtrimmedperson.correct_name
