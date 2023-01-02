@@ -2,8 +2,11 @@ require './student'
 require './teacher'
 require './book'
 require './rental'
+require './modules/menu'
 
 class App
+  include Menu
+
   OPERATIONS = {
     1 => :list_books,
     2 => :list_people,
@@ -18,18 +21,6 @@ class App
     @books = []
     @people = []
     @rentals = []
-  end
-
-  def menu
-    puts ''
-    puts 'Please choose an option by entering a number:'
-    puts '1 - List all books'
-    puts '2 - List all people'
-    puts '3 - Create a person'
-    puts '4 - Create a book'
-    puts '5 - Create a rental'
-    puts '6 - List all rentals for a given person id'
-    puts '7 - Exit'
   end
 
   def run
@@ -87,7 +78,7 @@ class App
     parent_permission = parent_permission.downcase == 'y'
     student = Student.new(age, name, parent_permission)
     puts 'Person created successfully'
-    @people.push(student)
+    @people << student
   end
 
   def create_teacher
@@ -99,7 +90,7 @@ class App
     specialization = gets.chomp
     teacher = Teacher.new(age, specialization, name)
     puts 'Person created successfully'
-    @people.push(teacher)
+    @people << teacher
   end
 
   def create_book
@@ -109,7 +100,7 @@ class App
     author = gets.chomp
     book = Book.new(title, author)
     puts 'Book created successfully'
-    @books.push(book)
+    @books << book
   end
 
   def create_rental
