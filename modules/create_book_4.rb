@@ -1,5 +1,4 @@
 module CreateBook
-
   def create_book
     print 'Title: '
     title = gets.chomp
@@ -9,5 +8,4 @@ module CreateBook
     puts 'Book created successfully'
     @books << book
   end
-
 end
