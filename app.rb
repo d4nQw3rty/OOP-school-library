@@ -3,9 +3,13 @@ require './teacher'
 require './book'
 require './rental'
 require './modules/menu'
+require './modules/list_book'
+require './modules/list_people'
 
 class App
   include Menu
+  include ListBooks
+  include ListPeople
 
   OPERATIONS = {
     1 => :list_books,
@@ -36,22 +40,6 @@ class App
       else
         puts 'That is not a valid input'
       end
-    end
-  end
-
-  def list_books
-    if @books.empty?
-      puts 'No books found'
-    else
-      @books.each { |book| puts "Title: #{book.title}, Author: #{book.author}" }
-    end
-  end
-
-  def list_people
-    if @people.empty?
-      puts 'No people found'
-    else
-      @people.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
     end
   end
 
