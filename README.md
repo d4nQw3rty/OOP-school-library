@@ -201,6 +201,12 @@ Example:
 - Twitter: [@twitter](https://twitter.com/Danys_Linares)
 - LinkedIn: [LinkedIn](www.linkedin.com/in/danys-linares)
 
+👤 **Oscar Fernández Muñoz**
+
+- GitHub: [@oscarfmdev](https://github.com/oscarfmdev)
+- Twitter: [@oscarfmdev](https://twitter.com/oscarfmdev)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/oscarfmdev)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
