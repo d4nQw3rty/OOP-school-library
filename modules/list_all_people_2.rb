@@ -1,9 +1,21 @@
 module ListPeople
   def list_people
-    if @people.empty?
+    people_file = './people.json'
+
+    if JSON.parse(File.read(people_file))['teachers'].empty? && JSON.parse(File.read(people_file))['students'].empty?
       puts 'No people found'
     else
-      @people.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+      puts 'These are the people:'
+      data = File.read(people_file)
+      people_data = JSON.parse(data)
+      students = people_data['students']
+      teachers = people_data['teachers']
+      students.each do |student|
+        puts  "ID: #{student['id']}, Name: #{student['name']}, Age: #{student['age']}, Parent permission: #{student['parent_permission']} "
+      end
+      teachers.each do |teacher|
+        puts  "ID: #{teacher['id']}, Name: #{teacher['name']}, Age: #{teacher['age']}, Parent permission: #{teacher['parent_permission']}, Specialization: #{teacher['specialization']} "
+      end
     end
   end
 end
