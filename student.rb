@@ -22,10 +22,12 @@ class Student < Person
   def save_student
     # save student to file
     student_json = { id: @id, age: @age, name: @name, parent_permission: @parent_permission,
-                     classroom: @classroom }.to_json
-    File.open('students.json', 'a') do |file|
-      file.puts student_json
-    end
+      classroom: @classroom }
+    file = File.read('people.json')
+    data = JSON.parse(file)
+    data['students'] << student_json
+    json = data.to_json
+    File.write('people.json', json)
   end
 
   # method to play

@@ -16,10 +16,12 @@ class Teacher < Person
   def save_teacher
     # save teacher to file
     teacher_json = { id: @id, age: @age, name: @name, parent_permission: @parent_permission,
-                     specialization: @specialization }.to_json
-    File.open('teachers.json', 'a') do |file|
-      file.puts teacher_json
-    end
+                     specialization: @specialization}
+    file = File.read('people.json')
+    data = JSON.parse(file)
+    data['teachers'] << teacher_json
+    json = data.to_json
+    File.write('people.json', json)
   end
 
   # getter method
