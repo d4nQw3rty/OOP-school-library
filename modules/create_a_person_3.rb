@@ -23,6 +23,7 @@ module CreatePerson
     student = Student.new(age, name, parent_permission)
     puts 'Person created successfully'
     @people << student
+    student.save_student
   end
 
   def create_teacher
@@ -35,5 +36,6 @@ module CreatePerson
     teacher = Teacher.new(age, specialization, name)
     puts 'Person created successfully'
     @people << teacher
+    teacher.save_teacher
   end
 end
