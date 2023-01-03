@@ -12,10 +12,12 @@ class Book
 
   def save_book
     # save book to file
-    book_json = { title: @title, author: @author }.to_json
-    File.open('books.json', 'a') do |file|
-      file.puts book_json
-    end
+    file = File.read('books.json')
+    data = JSON.parse(file)
+    book_json = { title: @title, author: @author }
+    data['books'] << book_json
+    json = data.to_json
+    File.write('books.json', json)
   end
 
   def load_books
