@@ -26,10 +26,6 @@ class Person < Nameable
     @name
   end
 
-  def add_rental(date, book)
-    @rentals.push(Rental.new(date, book, self))
-  end
-
   # Private methods
 
   private

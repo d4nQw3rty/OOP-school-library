@@ -7,5 +7,6 @@ module CreateBook
     book = Book.new(title, author)
     puts 'Book created successfully'
     @books << book
+    book.save_book
   end
 end
