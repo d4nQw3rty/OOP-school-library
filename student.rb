@@ -22,7 +22,7 @@ class Student < Person
   def save_student
     # save student to file
     student_json = { id: @id, age: @age, name: @name, parent_permission: @parent_permission,
-      classroom: @classroom }
+                     classroom: @classroom }
     file = File.read('people.json')
     data = JSON.parse(file)
     data['students'] << student_json

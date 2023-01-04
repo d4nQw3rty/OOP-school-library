@@ -10,7 +10,7 @@ module ListBooks
       books_data = JSON.parse(data)
       books = books_data['books']
       books.each do |book|
-        puts  "Title: #{book['title']} Author: #{book['author']} "
+        puts "Title: #{book['title']} Author: #{book['author']} "
       end
     end
   end

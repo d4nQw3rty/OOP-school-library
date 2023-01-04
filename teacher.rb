@@ -16,7 +16,7 @@ class Teacher < Person
   def save_teacher
     # save teacher to file
     teacher_json = { id: @id, age: @age, name: @name, parent_permission: @parent_permission,
-                     specialization: @specialization}
+                     specialization: @specialization }
     file = File.read('people.json')
     data = JSON.parse(file)
     data['teachers'] << teacher_json
