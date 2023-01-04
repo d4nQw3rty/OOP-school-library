@@ -11,7 +11,7 @@ describe Student do
       expect(student.classroom).to eq(new_classroom)
     end
 
-    it "should add the student to the classroom's list of students" do
+    it 'should add the student to the classroom\'s list of students' do
       new_classroom = Classroom.new(2)
       student.classroom = new_classroom
       expect(new_classroom.students).to include(student)
