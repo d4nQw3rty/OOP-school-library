@@ -15,8 +15,8 @@ module CreateRental
     select_person(people)
     person_index = gets.chomp.to_i
     print 'Date: '
-    date = gets.chomp
-    rental = { date:, book: books[book_index], person: people[person_index] }
+    date_info = gets.chomp
+    rental = { date: date_info, book: books[book_index], person: people[person_index] }
     rentals << rental unless @rentals.include?(rental)
     json = rentals_data.to_json
     File.write('rentals.json', json)
