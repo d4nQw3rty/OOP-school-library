@@ -3,8 +3,15 @@ module ListAllRentals
     print 'ID of person: '
     id = gets.chomp.to_i
     puts 'Rentals:'
-    @rentals.select do |rental|
-      puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}" if rental.person.id == id
+    file = File.read('rentals.json')
+    data = JSON.parse(file)
+
+    data['rentals']
+
+    data['rentals'].select do |rental|
+      if rental['person']['id'] == id
+        puts "Date: #{rental['date']}, Book '#{rental['book']['title']}' by #{rental['book']['author']}"
+      end
     end
   end
 end
