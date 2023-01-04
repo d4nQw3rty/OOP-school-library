@@ -2,7 +2,7 @@ require_relative '../student'
 
 describe Student do
   let(:classroom) { Classroom.new(1) }
-  let(:student) { Student.new(18, 'Alice', parent_permission: true, classroom:) }
+  let(:student) { Student.new(18, 'Alice', parent_permission: true, classroom: 'A') }
 
   describe '#classroom=' do
     it 'should set the correct classroom' do
