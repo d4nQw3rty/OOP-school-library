@@ -11,10 +11,10 @@ module ListPeople
       students = people_data['students']
       teachers = people_data['teachers']
       students.each do |student|
-        puts "ID: #{student['id']}, Name: #{student['name']}, Age: #{student['age']}, Parent permission: #{student['parent_permission']} "
+        puts "ID: #{student['id']}, Name: #{student['name']}, Age: #{student['age']} "
       end
       teachers.each do |teacher|
-        puts "ID: #{teacher['id']}, Name: #{teacher['name']}, Age: #{teacher['age']}, Parent permission: #{teacher['parent_permission']}, Specialization: #{teacher['specialization']} "
+        puts "ID: #{teacher['id']}, Name: #{teacher['name']}, Age: #{teacher['age']}, Sp: #{teacher['specialization']} "
       end
     end
   end

@@ -18,5 +18,5 @@ class Book
     data['books'] << book_json
     json = data.to_json
     File.write('books.json', json)
-  end  
+  end
 end
